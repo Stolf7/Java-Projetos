@@ -1,30 +1,31 @@
 import javax.swing.JOptionPane; // importa a classe JOptionPane
+import java.awt.geom.Arc2D;
 
 public class Calculadora {
     public static void main(String[] args) {
-        String firstNumber, secondNumber, operador;
-        float number1, number2, soma, subtracao, divisao, multiplicacao;
+        String firstNumber, secondNumber, opcaoMatematica;
+        float number1, number2, soma, subtracao, divisao, multiplicacao, operador;
 
         firstNumber = JOptionPane.showInputDialog("Entre com o primeiro numero: ");
-        operador = JOptionPane.showInputDialog("Operacoes:\nSoma (1)\nSubtracao (2)\nDivisao (3)\nMultiplicacao (4)");
+        opcaoMatematica = JOptionPane.showInputDialog("Operacoes:\nSoma (1)\nSubtracao (2)\nDivisao (3)\nMultiplicacao (4)");
         secondNumber = JOptionPane.showInputDialog("Entre com o segundo numero: ");
 
-        operador = Integer.parseInt(operador);
-        number1 = Integer.parseInt(firstNumber);
-        number2 = Integer.parseInt(secondNumber);
+        operador = Float.parseFloat(opcaoMatematica);
+        number1 = Float.parseFloat(firstNumber);
+        number2 = Float.parseFloat(secondNumber);
 
         soma = number1 + number2;
         subtracao = number1 - number2;
         divisao = number1 / number2;
         multiplicacao = number1 * number2;
 
-        if (operador == +) {
+        if (operador == 1) {
             JOptionPane.showMessageDialog(
                     null, "Soma: " + soma, "Results",
                     JOptionPane.PLAIN_MESSAGE);
         }
 
-        else if (operador == -) {
+        else if (operador == 2) {
             JOptionPane.showMessageDialog(
                     null, "Subtracao: " + subtracao, "Results",
                     JOptionPane.PLAIN_MESSAGE );
