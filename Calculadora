@@ -1,0 +1,47 @@
+import javax.swing.JOptionPane; // importa a classe JOptionPane
+
+public class Calculadora {
+    public static void main(String[] args) {
+        String firstNumber, secondNumber, operador;
+        float number1, number2, soma, subtracao, divisao, multiplicacao;
+
+        firstNumber = JOptionPane.showInputDialog("Entre com o primeiro numero: ");
+        operador = JOptionPane.showInputDialog("Operacoes:\nSoma (1)\nSubtracao (2)\nDivisao (3)\nMultiplicacao (4)");
+        secondNumber = JOptionPane.showInputDialog("Entre com o segundo numero: ");
+
+        operador = Integer.parseInt(operador);
+        number1 = Integer.parseInt(firstNumber);
+        number2 = Integer.parseInt(secondNumber);
+
+        soma = number1 + number2;
+        subtracao = number1 - number2;
+        divisao = number1 / number2;
+        multiplicacao = number1 * number2;
+
+        if (operador == +) {
+            JOptionPane.showMessageDialog(
+                    null, "Soma: " + soma, "Results",
+                    JOptionPane.PLAIN_MESSAGE);
+        }
+
+        else if (operador == -) {
+            JOptionPane.showMessageDialog(
+                    null, "Subtracao: " + subtracao, "Results",
+                    JOptionPane.PLAIN_MESSAGE );
+        }
+
+        else if (operador == 3) {
+            JOptionPane.showMessageDialog(
+                    null, "Divisao: " + divisao, "Results",
+                    JOptionPane.PLAIN_MESSAGE );
+        }
+
+        else if (operador == 4) {
+            JOptionPane.showMessageDialog(
+                    null, "Multiplicacao: " + multiplicacao, "Results",
+                    JOptionPane.PLAIN_MESSAGE );
+        }
+
+        System.exit(0);
+    }
+}
